@@ -95,6 +95,7 @@ a{
 	box-sizing: border-box;
 	height: 500px;
 	overflow: scroll;
+	overflow-x:hidden;
 	padding: 0px 20px 20px 20px;
 	font-size: 0.8em;
 }

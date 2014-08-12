@@ -2,7 +2,14 @@
 
 
 <div id="writer">
-	<h2>Writer:</h2>
+	<h2>
+		Write/Edit:
+		<span style="float:right">
+			<button id="save">save</button>
+			<button id="preview">preview</button>
+			<button id="publish">publish</button>
+		</span>
+	</h2>
 	<div class="half">
 		<textarea id="md">#Title</textarea>
 	</div>

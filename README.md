@@ -1,4 +1,4 @@
-![logo](assets/logo.jpg)
+![logo](assets/logo2.jpg)
 
 BROG
 ====

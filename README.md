@@ -1,4 +1,4 @@
-![assets/logo.jpg]('Logo')
+![logo](assets/logo.jpg)
 
 BROG
 ====

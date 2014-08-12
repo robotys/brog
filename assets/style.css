@@ -99,3 +99,26 @@ a{
 	padding: 0px 20px 20px 20px;
 	font-size: 0.8em;
 }
+
+.listing{
+	border-collapse: collapse;
+	padding: 0px;
+	background: #f9f9f9;
+	font-size: 0.8em;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.listing td{
+	padding: 8px;
+}
+
+.listing thead th{
+	border-bottom: 1px #558 solid;
+	padding: 8px;
+	background: #fff;
+}
+
+.listing tr:nth-child(even) td{
+	background: #fff;
+}

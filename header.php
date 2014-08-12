@@ -8,15 +8,48 @@
 
 	<script>
 	$(document).ready(function(){
+
+		// hide semua dalam content
+		$('#writer').hide();
+		$('#posts').show();
+
 		$('#md').on('keyup', function(){
 			$('#viewer').html(markdown.toHTML($(this).val()));
 		});
 
 		$('#save').on('click', function(){
+			$(this).html('saving');
+			$(this).prop('disabled', true);
 			$.post('save.php', {md: $('#md').val()}, function(data){
-				console.log(data);
+				if(data == 'true'){
+					$('#save').html('saved').delay(1000).html('save').prop('disabled', false);;
+					$('#save').html('save').prop('disabled', false);	
+				} 
 			});
 		});
+
+
+		$('.post_edit').on('click', function(){
+			editor($(this).attr('data-filename'));
+		});
+
+		function editor(filename){
+			var md = '# Title Was Here';
+			if(filename != undefined){
+				$.get('posts/'+filename, function(data){
+					
+					hide_all();
+					$('#md').val(data);
+					$('#viewer').html(markdown.toHTML(data));
+					
+					$('#writer').show();
+				})
+			}
+		}
+
+		function hide_all(){
+			$('#posts, #writer').hide();
+		}
     });
     </script>
 </head>
